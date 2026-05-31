@@ -5,9 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
-        run: |
-          echo "CLONING REPOSITORY"
-          git clone git@github.com:username/${{github.repository}}.git myFiles
-          cd myFiles && ls
+        uses: actions/checkout@v4
+        # run: |
+        #   echo "CLONING REPOSITORY"
+        #   git clone git@github.com:username/${{github.repository}}.git myFiles
+        #   cd myFiles && ls
 
   
