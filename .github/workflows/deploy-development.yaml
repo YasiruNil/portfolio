@@ -1,0 +1,16 @@
+name: Deploy to Development
+on: 
+  push:
+    branches:
+      - development
+jobs: 
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        run: |
+          echo "CLONING REPO"
+          git clone https://github.com/${{ github.repository }}.git myFiles
+          cd myFiles && ls
+
+  
