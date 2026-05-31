@@ -7,7 +7,7 @@ jobs:
       - name: Get Code
         run: |
           echo "CLONING REPO"
-          git clone https://github.com/${{ github.repository }}.git myFiles
+          git clone git@github.com:username/${{github.repository}}.git myFiles
           cd myFiles && ls
 
   
