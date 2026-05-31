@@ -18,7 +18,7 @@ export default function HomePage() {
                 SYSTEM STATUS: OPEN_FOR_HIRE
               </span>
               <h1 id="hero-heading" className="font-display-lg text-5xl md:text-7xl text-color-on-surface leading-[1.05] tracking-tighter">
-                Yasiru Nilanga <br />
+                Yasiru Nilanga Damboragama <br />
                 <span className="text-color-accent-cyan opacity-90">Digital Architect</span>
               </h1>
               <p className="font-body-lg text-lg text-color-on-surface-variant max-w-xl leading-relaxed">
