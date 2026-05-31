@@ -16,9 +16,7 @@ jobs:
       - name: Setup Node js
         uses: ./.github/actions/setupnode
       - name: Run Tests
-        run: pnpm test -- --watchAll=false
-      - name: Completed Job
-        run: echo "Tests Completed Successfully"
+        run: pnpm test
   build:
     runs-on: ubuntu-latest
     needs: test
@@ -34,8 +32,6 @@ jobs:
         with:
           name: dist-files
           path: dist
-      - name: Completed Job
-        run: echo "Build Completed Successfully"
   deploy:
     runs-on: ubuntu-latest
     needs: build
