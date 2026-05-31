@@ -20,10 +20,8 @@ jobs:
         run: node -v
       - name: Install Dependencies
         run: pnpm install
-        working-directory: yasiru-portfolio
       - name: Run Tests
         run: pnpm test
-        working-directory: yasiru-portfolio
       - name: Completed Job
         run: echo "Tests Completed Successfully"
 
