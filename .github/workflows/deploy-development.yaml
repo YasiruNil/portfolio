@@ -24,5 +24,29 @@ jobs:
         run: pnpm test
       - name: Completed Job
         run: echo "Tests Completed Successfully"
-
-  
+  build:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v4
+      - name: Setup Node js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+      - name: Print Node Version
+        run: node -v
+      - name: Install Dependencies
+        run: pnpm install
+      - name: Build Project
+        run: pnpm build
+      - name: Completed Job
+        run: echo "Build Completed Successfully"
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to Development
+        run: echo "Deploying to Development Environment"
