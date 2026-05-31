@@ -26,7 +26,7 @@ export default function HomePage() {
               </p>
               <div className="flex flex-wrap gap-5 mt-4">
                 <a href="#projects" className="bg-color-accent-cyan text-color-on-primary-fixed px-10 py-5 rounded-sm font-headline-md text-sm uppercase tracking-widest flex items-center gap-3 focus:outline-2 focus:outline-color-accent-cyan" aria-label="View Projects Matrix">
-                  View Matrix
+                  View Matrixs
                   <span className="material-symbols-outlined text-base" aria-hidden="true">arrow_right_alt</span>
                 </a>
                 <a href="#contact" className="border border-white/20 bg-white/5 px-10 py-5 rounded-sm font-headline-md text-sm uppercase tracking-widest text-color-on-surface hover:bg-white/10 transition-all focus:outline-2 focus:outline-color-accent-cyan" aria-label="Initialize Contact">
