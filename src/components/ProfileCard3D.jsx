@@ -4,9 +4,11 @@ import { Float, Sparkles } from '@react-three/drei'
 import { TextureLoader, EdgesGeometry, PlaneGeometry } from 'three'
 import * as THREE from 'three'
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 function ProfileScene({ mouse, isHovering }) {
   const groupRef = useRef()
-  const texture = useLoader(TextureLoader, '/profile.jpg')
+  const texture = useLoader(TextureLoader, `${BASE_URL}profile.jpg`)
   const borderGeo = useMemo(() => new EdgesGeometry(new PlaneGeometry(2.48, 3.1)), [])
 
   useFrame(({ clock }) => {

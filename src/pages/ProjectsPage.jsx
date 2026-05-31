@@ -3,33 +3,35 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import BackgroundSparkles from '../components/BackgroundSparkles';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const projects = [
   {
     title: "Enterprise Cloud Dashboard",
     tags: ["NEXT.JS", "GRAPHQL", "KUBERNETES"],
     desc: "Architected a unified monitoring solution for multi-region cloud clusters, reducing incident response time by 40%.",
-    img: "/project1.jpg",
+    img: `${BASE_URL}project1.jpg`,
     colSpan: "md:col-span-8"
   },
   {
     title: "Real-time Analytics",
     tags: ["GO", "GRPC"],
     desc: "High-throughput data ingestion engine processing 50k+ events/sec with sub-millisecond latency.",
-    img: "/project2.jpg",
+    img: `${BASE_URL}project2.jpg`,
     colSpan: "md:col-span-4"
   },
   {
     title: "Serverless Logistics API",
     tags: ["AWS LAMBDA", "TERRAFORM"],
     desc: "Scalable backend for a global courier service handling 1M+ daily deliveries. Implemented automated CI/CD and IaC.",
-    img: "/project3.jpg",
+    img: `${BASE_URL}project3.jpg`,
     colSpan: "md:col-span-8"
   },
   {
     title: "Threat Detection AI",
     tags: ["PYTHON", "PYTORCH"],
     desc: "AI-powered security layer identifying anomalous network traffic patterns with 98.4% accuracy.",
-    img: "/project4.jpg",
+    img: `${BASE_URL}project4.jpg`,
     colSpan: "md:col-span-4"
   }
 ];
