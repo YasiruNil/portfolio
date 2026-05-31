@@ -36,7 +36,7 @@ export default function HomePage() {
             </div>
             <div className="md:col-span-5 relative mt-12 md:mt-0">
               <div className="relative w-full aspect-4/5 rounded-xl overflow-hidden shadow-2xl neon-border" aria-hidden="true">
-                <img alt="Portrait of Yasiru Nilanga, Senior Systems Architect" className="w-full h-full object-cover grayscale-[0.2]" src="/profile.jpg" />
+                <img alt="Portrait of Yasiru Nilanga, Senior Systems Architect" className="w-full h-full object-cover grayscale-[0.2]" src={`${import.meta.env.BASE_URL}profile.jpg`} />
               </div>
               <div className="absolute -bottom-8 -left-8 glass-dark backdrop-blur-xl p-8 rounded-lg shadow-2xl flex items-center gap-5 animate-bounce-slow border border-color-accent-cyan/20" aria-hidden="true">
                 <div className="bg-color-accent-cyan text-color-on-primary-fixed w-14 h-14 rounded-sm flex items-center justify-center shadow-[0_0_15px_rgba(0,242,255,0.4)]">

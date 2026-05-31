@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage":"https://YasiruNil.github.io/",
+  "homepage":"https://YasiruNil.github.io/portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
