@@ -1,12 +1,11 @@
-name: Deploy to Development
+name: Deploy to GitHub Pages
 on:
   push:
     branches:
       - main
-      - 'feature/**'
     paths-ignore:
       - README.md
-  workflow_dispatch:
+  workflow_dispatch:  
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -30,18 +29,22 @@ jobs:
       - name: Build Project
         run: pnpm build
       - name: Upload Dist Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: dist-files
+          name: github-pages
           path: dist
   deploy:
     runs-on: ubuntu-latest
     needs: build
+    permissions:
+      pages: write 
+      id-token: write  
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Download Dist Artifact
-        uses: actions/download-artifact@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
         with:
-          name: dist-files
-          path: dist
-      - name: Deploy to Development
-        run: echo "Deploying to Development Environment"
+          token: ${{ secrets.GITHUB_TOKEN }}
