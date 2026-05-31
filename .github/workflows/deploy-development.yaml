@@ -1,12 +1,11 @@
 name: Deploy to Development
-on: 
+on:
   push:
     branches:
       - main
       - 'feature/**'
     paths-ignore:
       - README.md
-      - '.github/workflows/**'
   workflow_dispatch:
 jobs:
   test:
@@ -14,19 +13,17 @@ jobs:
     steps:
       - name: Get Code
         uses: actions/checkout@v4
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        # - name: Setup pnpm
+        #   uses: pnpm/action-setup@v4
+        # - name: Setup Node js
+        #   uses: actions/setup-node@v4
+        #   with:
+        #     node-version: 22
+        #     cache: 'pnpm'
       - name: Setup Node js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: 'pnpm'
-      - name: Print Node Version
-        run: node -v
-      - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+        uses: ./.github/actions/setupnode
       - name: Run Tests
-        run: pnpm test
+        run: pnpm test -- --watchAll=false
       - name: Completed Job
         run: echo "Tests Completed Successfully"
   build:
@@ -38,14 +35,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
       - name: Setup Node js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: 'pnpm'
-      - name: Print Node Version
-        run: node -v
-      - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+        uses: ./.github/actions/setupnode
       - name: Build Project
         run: pnpm build
       - name: Upload Dist Artifact

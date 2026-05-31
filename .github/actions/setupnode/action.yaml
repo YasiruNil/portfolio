@@ -1,0 +1,13 @@
+name: 'Setup Node.js Environment'
+description: 'Action to set up Node.js environment for GitHub Actions workflows'
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22
+        cache: 'pnpm'
+    - name: Install Dependencies
+      run: pnpm install --frozen-lockfile
+      shell: bash
