@@ -15,8 +15,8 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Experience', path: '/experience' },
-    { name: 'Projects', path: '/projects' },
-    { name: 'Skills', path: '/experience#skills' },
+    // { name: 'Projects', path: '/projects' },
+    // { name: 'Skills', path: '/experience#skills' },
     { name: 'Contact', path: '/contact' }
   ];
 
@@ -24,7 +24,7 @@ export default function Navbar() {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-color-surface/95 py-2' : 'bg-color-surface/80 py-4'} backdrop-blur-lg border-b border-color-outline-variant/20 shadow-lg`} aria-label="Main Navigation">
       <div className="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <Link to="/" className="font-headline-md text-[20px] font-bold tracking-tight text-color-on-surface" aria-label="Home">
-          YASIRU N. <span className="text-color-primary-fixed-dim">| ARCHITECT</span>
+          YASIRU N. <span className="text-color-primary-fixed-dim">| Software Engineer</span>
         </Link>
         <div className="hidden md:flex items-center space-x-10" role="menubar">
           {navLinks.map((link) => (

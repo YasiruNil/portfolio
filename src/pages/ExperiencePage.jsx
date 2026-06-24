@@ -17,7 +17,7 @@ const experiences = [
     current: true,
   },
   {
-    title: 'Fullstack Developer (Senior)',
+    title: 'Senior Frontend Engineer',
     company: 'Mybudget (Australia)',
     period: '2022 — 2025',
     bullets: [
