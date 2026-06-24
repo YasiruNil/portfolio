@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage":"https://YasiruNil.github.io/portfolio",
+  "homepage": "https://YasiruNil.github.io/portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,8 +12,12 @@
   },
   "jest": {
     "testEnvironment": "jsdom",
-    "setupFiles": ["<rootDir>/jest.setup.js"],
-    "setupFilesAfterEnv": ["@testing-library/jest-dom"],
+    "setupFiles": [
+      "<rootDir>/jest.setup.js"
+    ],
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom"
+    ],
     "moduleNameMapper": {
       "\\.(css|scss|sass)$": "<rootDir>/__mocks__/styleMock.js",
       "\\.(jpg|jpeg|png|gif|svg)$": "<rootDir>/__mocks__/fileMock.js"
@@ -27,6 +31,7 @@
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.6.1",
     "@tailwindcss/vite": "^4.3.0",
+    "framer-motion": "^12.41.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-router-dom": "^7.16.0",

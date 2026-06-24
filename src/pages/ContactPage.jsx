@@ -121,7 +121,7 @@ export default function ContactPage() {
               </div>
 
               {/* Contact form */}
-              <div className="lg:col-span-3">
+              {/* <div className="lg:col-span-3">
                 <h2 className="font-label-mono text-label-mono text-color-primary-fixed-dim tracking-widest mb-6">
                   SEND A MESSAGE
                 </h2>
@@ -205,7 +205,7 @@ export default function ContactPage() {
                     </button>
                   </form>
                 )}
-              </div>
+              </div> */}
 
             </div>
           </section>
