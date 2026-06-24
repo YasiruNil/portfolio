@@ -1,0 +1,20 @@
+name: "Portfolio"
+services:
+  portfolio:
+    container_name: portfolio
+    build: 
+      context: "."
+      dockerfile: Dockerfile
+    image: booking-app:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - my-imgs:/app/uploads
+    develop:
+      watch:
+        - path: "."
+          action: sync
+          target: "/app"
+          ignore: ["node_modules", "dist"]
+volumes:
+  my-imgs:
